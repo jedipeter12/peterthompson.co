@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peter Thompson</title>
+  <meta
+    name="description"
+    content="Official homepage for Peter Thompson. Explore JediPeter, PapaMikeTango, JediPeterCodes, and MyShop."
+  />
+  <style>
+    :root {
+      --bg: #111315;
+      --panel: #181b1f;
+      --panel-2: #1f2429;
+      --text: #f4f1ea;
+      --muted: #b8b2a8;
+      --accent: #8fb8ff;
+      --accent-hover: #a7c8ff;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max-width: 1100px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(143, 184, 255, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.03), transparent 20%),
+        linear-gradient(180deg, #0f1113 0%, #15181c 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 3rem 0;
+    }
+
+    .hero-inner {
+      width: 100%;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .hero-copy {
+      max-width: 720px;
+    }
+
+    .hero-copy p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      min-height: 235px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(143, 184, 255, 0.28);
+      background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.02));
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: auto -30% -35% auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(143, 184, 255, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+
+    .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.65rem;
+    }
+
+    .card h2 {
+      margin: 0 0 0.7rem;
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+      max-width: 28ch;
+    }
+
+    .card-footer {
+      margin-top: 1.5rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #0f1113;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .button.secondary:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(143, 184, 255, 0.28);
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0 2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        min-height: auto;
+        padding: 4rem 0 3rem;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="hero">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">Official Home</span>
+        <h1>Peter Thompson</h1>
+        <p>
+          A central home for my projects, brands, and storefronts.
+          Choose a direction below.
+        </p>
+      </div>
+
+      <section class="cards" aria-label="Project links">
+        <article class="card">
+          <div>
+            <div class="label">Creative / Personal Brand</div>
+            <h2>JediPeter</h2>
+            <p>
+              Photography, video, writing, and the broader personal brand hub.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a class="button" href="https://your-jp-link-here.com" target="_blank" rel="noopener noreferrer">
+              Enter JediPeter
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="label">Primary Mission / Training</div>
+            <h2>Papa Mike Tango</h2>
+            <p>
+              Content, resources, and links connected to the Papa Mike side of the brand.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a class="button" href="https://your-pmt-link-here.com" target="_blank" rel="noopener noreferrer">
+              Enter Papa Mike Tango
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="label">Technical / Coding</div>
+            <h2>JediPeterCodes</h2>
+            <p>
+              Development, technical work, and future coding-focused projects.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a class="button secondary" href="#" aria-disabled="true">
+              Coming Soon
+            </a>
+            <div class="status">Link Hub will be added later.</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <div class="label">Storefront</div>
+            <h2>MyShop</h2>
+            <p>
+              Placeholder for products, recommendations, digital goods, or merch.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a class="button secondary" href="www.amway.com/myshop/peterandsarah" aria-disabled="true">
+              Enter MyShop
+            </a>
+            <div class="status">Shop link will go here.</div>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Peter Thompson. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
