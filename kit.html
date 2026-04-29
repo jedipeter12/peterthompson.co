@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kit | Peter Thompson</title>
+
+  <style>
+    :root {
+      --bg: #111315;
+      --panel: #181b1f;
+      --text: #f4f1ea;
+      --muted: #b8b2a8;
+      --accent: #8fb8ff;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(143, 184, 255, 0.12), transparent 28%),
+        linear-gradient(180deg, #0f1113 0%, #15181c 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 17, 19, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 2rem;
+    }
+
+    .nav nav {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .nav a:hover {
+      color: var(--text);
+    }
+
+    .divider {
+      opacity: 0.4;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 4rem 0;
+    }
+
+    .hero-copy {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin: 0.75rem 0 1rem;
+    }
+
+    .hero-copy p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    .kit-options {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .kit-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .kit-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(143, 184, 255, 0.28);
+    }
+
+    .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.65rem;
+    }
+
+    .kit-card h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.7rem;
+      letter-spacing: -0.03em;
+    }
+
+    .kit-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-top: 1.5rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button.jp {
+      background: #2F5D50;
+    }
+
+    .button.jp:hover {
+      background: #274E43;
+    }
+
+    .button.pmt {
+      background: #5A6B3C;
+    }
+
+    .button.pmt:hover {
+      background: #4F5F34;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0 2rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        align-items: flex-start;
+        padding: 4rem 0 3rem;
+      }
+
+      .kit-options {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <nav>
+        <a href="/">Home</a>
+        <span class="divider">|</span>
+        <a href="/kit.html">Kit</a>
+        <span class="divider">|</span>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="hero-copy">
+        <span class="eyebrow">Kit</span>
+        <h1>Choose a Kit</h1>
+        <p>
+          Gear, tools, and resources organized by use case instead of one giant messy list.
+        </p>
+      </div>
+
+      <section class="kit-options" aria-label="Kit options">
+        <article class="kit-card">
+          <div>
+            <div class="label">Creative / Technical</div>
+            <h2>JP / JPC Kit</h2>
+            <p>
+              Camera gear, creative tools, desk setup, software, coding resources, and things I use for photo, video, writing, and technical work.
+            </p>
+          </div>
+
+          <a class="button jp" href="/jp-jpc-kit.html">View JP / JPC Kit</a>
+        </article>
+
+        <article class="kit-card">
+          <div>
+            <div class="label">Purpose / Training / Preparedness</div>
+            <h2>PMT Kit</h2>
+            <p>
+              Practical gear, training tools, preparedness items, outdoor basics, and things that fit the Papa Mike Tango side of the house.
+            </p>
+          </div>
+
+          <a class="button pmt" href="/pmt-kit.html">View PMT Kit</a>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Peter Thompson. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
