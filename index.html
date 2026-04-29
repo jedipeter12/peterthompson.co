@@ -9,6 +9,42 @@
     content="Official homepage for Peter Thompson. Explore JediPeter, PapaMikeTango, JediPeterCodes, and MyShop."
   />
   <style>
+    .site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(15, 17, 19, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.nav nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.nav a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--text);
+}
+
+.divider {
+  opacity: 0.4;
+}
     :root {
       --bg: #111315;
       --panel: #181b1f;
@@ -262,6 +298,17 @@
   </style>
 </head>
 <body>
+  <header class="site-header">
+  <div class="container nav">
+    <nav>
+      <a href="/">Home</a>
+      <span class="divider">|</span>
+      <a href="/kit/">Kit</a>
+      <span class="divider">|</span>
+      <a href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
   <main class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
