@@ -1,0 +1,15 @@
+# Ignore everything in the repository by default.
+*
+
+# Publish only the website entry points and their public asset trees.
+!index.html
+!contact.html
+!kit.html
+!assets/
+!assets/**
+!jp/
+!jp/**
+!jpc/
+!jpc/**
+!pmt/
+!pmt/**

@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>PMT Kit | Peter Thompson</title>
+  <title>JP / JPC Kit | Peter Thompson</title>
+  <meta
+    name="description"
+    content="Creative and technical gear used by JediPeter and JediPeterCodes."
+  />
 
   <style>
     :root {
@@ -196,10 +200,31 @@
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.buy-button:hover {
+    .buy-button:hover {
   background: var(--jp-hover);
   transform: translateY(-1px);
 }
+
+    .coming-soon {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .coming-soon h2 {
+      margin: 0 0 0.75rem;
+      color: var(--text);
+    }
+
+    .coming-soon p {
+      margin: 0;
+      color: var(--muted);
+    }
 
     footer {
       border-top: 1px solid var(--border);
@@ -250,80 +275,9 @@
             </p>
       </section>
 
-      <section class="kit-grid" aria-label="PMT kit items">
-
-        <article class="kit-item">
-          <div class="kit-image">
-            <img src="../assets/placeholder.jpg" alt="Product image">
-          </div>
-
-          <div class="kit-content">
-            <h2>Product Name One</h2>
-            <p class="short-description">
-              Short one-sentence description of what this item is for.
-            </p>
-
-            <details>
-              <summary>Notes / Review</summary>
-              <p>
-                This is where your quick review goes. Keep it honest, practical, and short. Why do you use it? Who is it for? What should someone know before buying?
-              </p>
-            </details>
-
-            <a class="buy-button" href="#" target="_blank" rel="noopener noreferrer">
-              View / Buy
-            </a>
-          </div>
-        </article>
-
-        <article class="kit-item">
-          <div class="kit-image">
-            <img src="assets/placeholder.jpg" alt="Product image">
-          </div>
-
-          <div class="kit-content">
-            <h2>Product Name Two</h2>
-            <p class="short-description">
-              Another short description goes here.
-            </p>
-
-            <details>
-              <summary>Notes / Review</summary>
-              <p>
-                Add your thoughts here. This can be a mini-review, use case, warning, or recommendation.
-              </p>
-            </details>
-
-            <a class="buy-button" href="#" target="_blank" rel="noopener noreferrer">
-              View / Buy
-            </a>
-          </div>
-        </article>
-
-        <article class="kit-item">
-          <div class="kit-image">
-            <img src="assets/placeholder.jpg" alt="Product pic">
-          </div>
-
-          <div class="kit-content">
-            <h2>Product Name Three</h2>
-            <p class="short-description">
-              Short practical description of the item.
-            </p>
-
-            <details>
-              <summary>Notes / Review</summary>
-              <p>
-                Add your review, recommendation, or personal notes here.
-              </p>
-            </details>
-
-            <a class="buy-button" href="#" target="_blank" rel="noopener noreferrer">
-              View / Buy
-            </a>
-          </div>
-        </article>
-
+      <section class="coming-soon" aria-labelledby="jp-kit-status">
+        <h2 id="jp-kit-status">Kit recommendations coming soon</h2>
+        <p>I’m reviewing the list before publishing it. Check back for the gear and tools I use for creative and technical work.</p>
       </section>
     </div>
   </main>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Peter Thompson</title>
+  <meta
+    name="description"
+    content="Contact Peter Thompson about creative work, coding, or Papa Mike Tango."
+  />
+  <style>
+    :root {
+      --bg: #111315;
+      --panel: #181b1f;
+      --text: #f4f1ea;
+      --muted: #b8b2a8;
+      --accent: #8fb8ff;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --radius: 22px;
+      --max-width: 900px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(143, 184, 255, 0.12), transparent 28%),
+        linear-gradient(180deg, #0f1113 0%, #15181c 100%);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 17, 19, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav { display: flex; justify-content: center; padding: 1rem 2rem; }
+    .nav nav { display: flex; align-items: center; gap: 0.75rem; color: var(--muted); }
+    .nav a:hover { color: var(--text); }
+    .divider { opacity: 0.4; }
+
+    main { min-height: calc(100vh - 130px); padding: 5rem 0; }
+
+    .intro { text-align: center; margin-bottom: 2rem; }
+    .intro h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin: 0 0 1rem; letter-spacing: -0.04em; }
+    .intro p { max-width: 620px; margin: 0 auto; color: var(--muted); }
+
+    .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 210px;
+      padding: 1.5rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .contact-card h2 { margin: 0 0 0.75rem; }
+    .contact-card p { margin: 0 0 1.5rem; color: var(--muted); }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      margin-top: auto;
+      padding: 0.8rem 1rem;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #0f1113;
+      font-weight: 700;
+    }
+
+    .button.jp {
+      background: #2F5D50;
+      color: #ffffff;
+    }
+
+    .button.jp:hover { background: #274E43; }
+
+    .button.jpc {
+      background: #3E5C76;
+      color: #ffffff;
+    }
+
+    .button.jpc:hover { background: #354F63; }
+
+    .button.pmt {
+      background: #5A6B3C;
+      color: #ffffff;
+    }
+
+    .button.pmt:hover { background: #4F5F34; }
+
+    footer { border-top: 1px solid var(--border); padding: 1.5rem 0 2rem; color: var(--muted); text-align: center; }
+
+    @media (max-width: 760px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      main { padding: 4rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <nav aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <span class="divider">|</span>
+        <a href="/kit.html">Kit</a>
+        <span class="divider">|</span>
+        <a href="/contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="intro">
+        <h1>Get in touch</h1>
+        <p>Choose the project that best fits your question and your message will go to the right inbox.</p>
+      </section>
+
+      <section class="contact-grid" aria-label="Contact options">
+        <article class="contact-card">
+          <h2>JediPeter</h2>
+          <p>Photography, video, writing, and creative work.</p>
+          <a class="button jp" href="mailto:jp@peterthompson.co?subject=Inquiry">Email JediPeter</a>
+        </article>
+
+        <article class="contact-card">
+          <h2>JediPeterCodes</h2>
+          <p>Development, technical work, and coding projects.</p>
+          <a class="button jpc" href="mailto:jpc@peterthompson.co?subject=Inquiry">Email JediPeterCodes</a>
+        </article>
+
+        <article class="contact-card">
+          <h2>Papa Mike Tango</h2>
+          <p>Preparedness, outdoor skills, training, and gear.</p>
+          <a class="button pmt" href="mailto:pmt@peterthompson.co?subject=PMT%20Inquiry">Email Papa Mike Tango</a>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Peter Thompson. All rights reserved.</div>
+  </footer>
+</body>
+</html>
